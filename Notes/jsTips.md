@@ -11,3 +11,8 @@
    `for in`遍历的时候不用每次`hasOwnProperty`过滤原型上的属性，因为它甚至没有`hasOwnProperty, constructor, toString`方法.
 2. DOM event listening
    不再需要的时候，最好对绑定的事件解除。
+3. Array Hacks；
+   - 调用一个函数某些参数不是必要的传`null undefined`总是怪的
+   ```
+   foo(...['parameter1', , 'parameter3'])
+   ```
