@@ -17,4 +17,11 @@
    foo(...['parameter1', , 'parameter3'])
    ```
 4. `key`这个属性
-> Key is not really about performance, it’s more about identity (which in turn leads to better performance). Randomly assigned and changing values do not form an identity [Paul O’Shannessy](https://github.com/facebook/react/issues/1342#issuecomment-39230939)
+> Key is not really about performance, it’s more about identity (which in turn leads to better performance). Randomly assigned and changing values do not form an identity [Paul O’Shannessy](https://github.com/facebook/react/issues/1342#issuecomment-39230939)<br/>
+```js
+<ul>
+   <li key={Math.random()}></li>
+   <li></li>
+</ul>
+```
+这是很傻的做法，每次都是重建所有的孩子，因为key不能代表每个元素的身份 每次都不同。
