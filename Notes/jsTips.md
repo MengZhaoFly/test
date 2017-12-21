@@ -18,7 +18,7 @@
    ```
 4. `key`这个属性
 > Key is not really about performance, it’s more about identity (which in turn leads to better performance). Randomly assigned and changing values do not form an identity [Paul O’Shannessy](https://github.com/facebook/react/issues/1342#issuecomment-39230939)<br/>
-```js
+```html
 <ul>
    <li key={Math.random()}></li>
    <li></li>
