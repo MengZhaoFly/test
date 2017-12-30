@@ -4,18 +4,21 @@
 ```js
 const map1 = Map({a: 1,  b: {c: 2}});
 ```
-赵猛 > Immutable - Map > image2017-12-30 17:16:15.png
+>[](../images/m)
 大概可以看出有一些私有属性: _hash, _ownerID
 size: 大小
 在 _root 下有该map结构的 [key, value]
-以及从KeyedCollection继承了
-set, get, delete, delete merge .... 众多方法。
+以及从`KeyedCollection`继承了
+`set, get, delete, delete merge .... `众多方法。
 猜一下大概是大概就是围绕着 entries:[] 展开一些列的set，get
 ## 实现
-https://github.com/facebook/immutable-js/tree/master/src
+https://github.com/facebook/immutable-js/tree/master/src   
 src/utils/里有一些很有意思的辅助方法；
-数组，对象浅拷贝，判断简单对象
-类数组：return value && typeof value.length === 'number';
+数组，对象浅拷贝，判断简单对象   
+类数组：
+``` js
+return value && typeof value.length === 'number';
+```
 mixin（包括Symbol类型）：
 ```js
 function mixin(ctor, methods) {
@@ -36,10 +39,12 @@ emptyMap().withMutations(map => {
   iter.forEach((v, k) => map.set(k, v));
 });
 ```
-KeyCollection(value) 通过  new ObjectSeq(value) 生成对象：
+`KeyCollection(value)` 通过  `new ObjectSeq(value)` 生成对象：
+```js
 size: Object.keys(value).length
 _keys: Object.keys(value)
 _object: value的引用
+```
 接下来就是取到k, v生成entries的过程
 以前错误的理解
 ```js
