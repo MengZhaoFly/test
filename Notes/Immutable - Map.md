@@ -4,12 +4,12 @@
 ```js
 const map1 = Map({a: 1,  b: {c: 2}});
 ```
->[](../images/m)
-大概可以看出有一些私有属性: _hash, _ownerID
-size: 大小
-在 _root 下有该map结构的 [key, value]
-以及从`KeyedCollection`继承了
-`set, get, delete, delete merge .... `众多方法。
+![map_structure](../images/map_structure.png)
+大概可以看出有一些私有属性: _hash, _ownerID   
+size: 大小   
+在 _root 下有该map结构的 [key, value]   
+以及从`KeyedCollection`继承了   
+`set, get, delete, delete merge .... `众多方法。   
 猜一下大概是大概就是围绕着 entries:[] 展开一些列的set，get
 ## 实现
 https://github.com/facebook/immutable-js/tree/master/src   
