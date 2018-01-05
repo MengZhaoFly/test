@@ -34,4 +34,4 @@
    ```js
    NaN === NaN // false
    ```
-   [](../../images/Object_is_cmp.png)
+   ![](../images/Object_is_cmp.png)
