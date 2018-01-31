@@ -1,5 +1,6 @@
 ## HTTP连接管理
 ![](../images/HTTP连接管理.png)
+![](../images/HTTP连接管理.svg)
 
 ## 
 - TCP是可靠的数据管道，会按序，无差错地承载数据。
