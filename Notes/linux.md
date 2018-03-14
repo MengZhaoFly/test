@@ -5,7 +5,7 @@ nginx path: /usr/local/nginx/sbin/
 ```bash
 export PATH=/usr/local/nginx/sbin/:$PATH
 ```
-2. souece刷新，永久生效，当前用户
+2. source刷新，永久生效，当前用户
 ```bash
 vim ~/.bashrc 
 //在最后一行添上：
