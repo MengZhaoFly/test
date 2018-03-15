@@ -17,3 +17,8 @@ vim /etc/profile
 /export PATH //找到设置PATH的行，添加
 export PATH=/usr/local/nginx/sbin/:$PATH
 ```
+## nginx
+利用源码包安装，
+1. ./configure 大概是检测编译时候的一些配置，切记一定要 `yum install` 齐全
+2.  `make`
+3. `make install`
