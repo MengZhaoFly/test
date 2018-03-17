@@ -22,3 +22,26 @@ export PATH=/usr/local/nginx/sbin/:$PATH
 1. ./configure 大概是检测编译时候的一些配置，切记一定要 `yum install` 齐全
 2.  `make`
 3. `make install`
+
+## nginx location
+匹配优先级：
+1. = 精准匹配，
+```bash
+location = / {
+// config
+}
+```
+2. ^~ 普通字符匹配，一般用于目录
+```bash
+location ^~ /images/ {
+// config
+}
+```
+3. ^ 正则匹配 区分大小写
+
+4. ^* 正则匹配 不区分大小写
+```bash
+location ^* .(jpg|png)$ {
+// config
+}
+```
