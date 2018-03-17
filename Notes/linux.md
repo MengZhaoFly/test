@@ -26,13 +26,13 @@ export PATH=/usr/local/nginx/sbin/:$PATH
 ## nginx location
 匹配优先级：
 1. = 精准匹配，
-```bash
+```nginx
 location = / {
 // config
 }
 ```
 2. ^~ 普通字符匹配，一般用于目录
-```bash
+```nginx
 location ^~ /images/ {
 // config
 }
@@ -40,7 +40,7 @@ location ^~ /images/ {
 3. ^ 正则匹配 区分大小写
 
 4. ^* 正则匹配 不区分大小写
-```bash
+```nginx
 location ^* .(jpg|png)$ {
 // config
 }
