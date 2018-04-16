@@ -1,6 +1,6 @@
 ## require('module')
 `module` node原生的模块
-```
+```js
 const nativeModule = require('module');
 const vm = require('vm');
 const wrapper = nativeModule.wrap(moduleString);
